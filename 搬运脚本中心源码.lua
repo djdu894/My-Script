@@ -1,4 +1,5 @@
---缝合脚本只有公开源码才能走的远
+--恭喜你获得了源码，你可以把他公开，公开以后我也就不会再更新它了
+--搬运工留言
 local LBLG = Instance.new("ScreenGui", getParent)
 local LBL = Instance.new("TextLabel", getParent)
 local player = game.Players.LocalPlayer
@@ -64,7 +65,7 @@ about:Label("QQ3群： 144654048")
 about:Button("点击复制三群",function()
 setclipboard("144654048")
 end)
-about:Label("作者：我只是一个搬运工")
+about:Label("作者：搬运工")
 about:Label("UI是我借别人的，重要的事说三遍")
 about:Label("UI是我借别人的，重要的事说三遍")
 about:Label("UI是我借别人的，重要的事说三遍")
@@ -85,9 +86,17 @@ about:Toggle("脚本框架变小一点", "", false, function(state)
             game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
         end
     end)
+about:Toggle("彩虹UI", "", false, function(state)
+        if state then
+        game:GetService("CoreGui")["frosty"].Main.Style = "DropShadow"
+        else
+            game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
+        end
+end)
     about:Button("关闭脚本",function()
         game:GetService("CoreGui")["frosty"]:Destroy()
     end)
+    
 about:Button("怕点不到才加的",function()
 
 end)
